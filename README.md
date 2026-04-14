@@ -71,3 +71,4 @@ git push -u origin main
 - The `NEXT_PUBLIC_ADMIN_EMAILS` env variable controls which signed-in emails can access `/admin`.
 - For stronger security, update `firestore.rules` to match your real admin emails or use custom claims later.
 - Before first real use, save the default exam from `/admin` so Firestore has a `settings/currentExam` document.
+# qa-online-exam-platform
