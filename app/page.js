@@ -78,8 +78,8 @@ export default function HomePage() {
       await sendSignInLinkToEmail(auth, email, actionCodeSettings);
       setMessage(`Magic link sent to ${email}. Open it from your email to access the exam.`);
     } catch (error) {
-      console.error(error);
-      setMessage('Unable to send the magic link. Check Firebase Auth settings and your domain configuration.');
+  console.error('Magic link error:', error);
+  setMessage(`${error.code} - ${error.message}`);
     } finally {
       setIsSending(false);
     }
