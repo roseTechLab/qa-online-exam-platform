@@ -53,12 +53,12 @@ export default function HomePage() {
         });
       }
       window.localStorage.removeItem('pendingName');
-      setMessage('Magic link verified. You can now start the exam.');
+      setMessage('Access link verified. You can now start the exam.');
     }
 
     completeMagicLinkSignIn().catch((error) => {
       console.error(error);
-      setMessage('Could not complete sign-in. Please request a new magic link.');
+      setMessage('Could not complete sign-in. Please request a new access link.');
     });
   }, []);
 
@@ -76,9 +76,9 @@ export default function HomePage() {
       window.localStorage.setItem('emailForSignIn', email);
       window.localStorage.setItem('pendingName', name || 'Examinee');
       await sendSignInLinkToEmail(auth, email, actionCodeSettings);
-      setMessage(`Magic link sent to ${email}. Open it from your email to access the exam.`);
+      setMessage(`Access link sent to ${email}. Open it from your email to access the exam.`);
     } catch (error) {
-  console.error('Magic link error:', error);
+  console.error('Access link error:', error);
   setMessage(`${error.code} - ${error.message}`);
     } finally {
       setIsSending(false);
@@ -108,7 +108,7 @@ export default function HomePage() {
                   Email
                   <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" style={inputStyle} required />
                 </label>
-                <button disabled={isSending} style={primaryButton}>{isSending ? 'Sending...' : 'Send Magic Link'}</button>
+                <button disabled={isSending} style={primaryButton}>{isSending ? 'Sending...' : 'Send Access Link'}</button>
                 {message && <p style={{ margin: 0, color: '#0f766e' }}>{message}</p>}
               </form>
             ) : (
@@ -127,7 +127,7 @@ export default function HomePage() {
             <h2 style={{ marginTop: 0 }}>Instructions</h2>
             <ol style={{ paddingLeft: 20, lineHeight: 1.8 }}>
               <li>Enter your name and email address.</li>
-              <li>Click <strong>Click Send Access Link.</strong>.</li>
+              <li>Click <strong>Send Access Link</strong>.</li>
               <li>Open the sign-in link sent to your email.</li>
               <li>You will be redirected to the portal to begin your exam.</li>
               <li>Once submitted, a confirmation screen will verify that your responses have been recorded.</li>
