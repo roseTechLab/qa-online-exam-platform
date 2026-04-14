@@ -89,10 +89,9 @@ export default function HomePage() {
     <AppShell>
       <div style={{ display: 'grid', gap: 24 }}>
         <Card style={{ background: 'linear-gradient(135deg, #0f172a, #334155)', color: 'white', border: 'none' }}>
-          <h1 style={{ fontSize: 42, marginTop: 0, marginBottom: 12 }}>Junior QA Online Exam Platform</h1>
+          <h1 style={{ fontSize: 42, marginTop: 0, marginBottom: 12 }}>QA Online Exam Platform</h1>
           <p style={{ fontSize: 18, lineHeight: 1.6, margin: 0, color: '#e2e8f0' }}>
-            Email-only magic link login for examinees, timed exam flow, multiple-choice and essay questions,
-            admin question management, and a submission confirmation screen.
+            Access your exam securely, complete it within the allocated time, and submit your responses.
           </p>
         </Card>
 
@@ -125,17 +124,17 @@ export default function HomePage() {
           </Card>
 
           <Card>
-            <h2 style={{ marginTop: 0 }}>How this works</h2>
+            <h2 style={{ marginTop: 0 }}>Instructions</h2>
             <ol style={{ paddingLeft: 20, lineHeight: 1.8 }}>
-              <li>Enter your name and email.</li>
-              <li>Click <strong>Send Magic Link</strong>.</li>
-              <li>Open the sign-in link from your inbox.</li>
-              <li>You are redirected back to the portal and can start the exam.</li>
-              <li>After submission, the confirmation screen confirms your answers were recorded.</li>
+              <li>Enter your name and email address.</li>
+              <li>Click <strong>Click Send Access Link.</strong>.</li>
+              <li>Open the sign-in link sent to your email.</li>
+              <li>You will be redirected to the portal to begin your exam.</li>
+              <li>Once submitted, a confirmation screen will verify that your responses have been recorded.</li>
             </ol>
             <div style={{ background: '#f8fafc', padding: 16, borderRadius: 16, border: '1px solid #e2e8f0' }}>
-              <strong>Default exam seed</strong>
-              <p style={{ marginBottom: 0 }}>{defaultExam.title}</p>
+              <strong>Default Exam Set</strong>
+              <p style={{ marginBottom: 0, fontStyle: 'italic' }}>Standard Assessment Template</p>
             </div>
           </Card>
         </div>
